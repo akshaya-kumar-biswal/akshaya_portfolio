@@ -1,8 +1,9 @@
 import React from 'react';
+import HomeSection from '../components/HomeSection';
 
 const Home = () => (
   <>
-    <h1>Home</h1>
+    <HomeSection />
   </>
 );
 
