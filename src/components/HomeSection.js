@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import HeroImg from '../assets/images/hero.png';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
+import PText from './PText';
+import Button from './Button';
 
 const HomeSection = () => (
   <HeroStyles>
@@ -15,9 +17,56 @@ const HomeSection = () => (
         <div className="hero__img">
           <img src={HeroImg} alt="" />
         </div>
+        <div className="hero__info">
+          <PText>
+            I am working as a web developer for 2 years. I love to make new web
+            experiences for the people.
+          </PText>
+          <Button btnText="see my works" btnLink="/projects" />
+        </div>
+        <div className="hero__social">
+          <div className="hero__social__indicator">
+            <p>Follow</p>
+            <img src={SocialMediaArrow} alt="icon" />
+          </div>
+          <div className="hero__social__text">
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/fb.akshayakumarbiswal"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  FB
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/akshaya__biswal"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TW
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/akshaya-kumar-biswal"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GIT
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="hero__scrollDown">
+          <p>Scroll</p>
+          <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
+        </div>
       </div>
     </div>
-    <h1>Home section</h1>
   </HeroStyles>
 );
 
@@ -103,6 +152,52 @@ const HeroStyles = styled.div`
           letter-spacing: 5px;
           margin-bottom: 2rem;
         }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .hero {
+      min-height: 750px;
+    }
+    .hero__heading {
+      font-size: 1.4rem;
+      margin-bottom: -3rem;
+      .hero__name {
+        font-size: 4.5rem;
+      }
+    }
+    .hero__img {
+      height: 300px;
+    }
+    .hero__info {
+      margin-top: 3rem;
+    }
+    .hero__social {
+      left: 0px;
+      bottom: -15%;
+      width: 20px;
+      .hero__social__indicator {
+        width: 20px;
+        p {
+          font-size: 1.2rem;
+        }
+        img {
+          max-height: 22px;
+        }
+      }
+      .hero__social__text {
+        ul li a {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .hero__scrollDown {
+      right: 0;
+      width: 20px;
+      gap: 1rem;
+      p {
+        font-size: 1.3rem;
       }
     }
   }
