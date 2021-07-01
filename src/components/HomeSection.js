@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/images/hero.png';
+import HeroImg from '../assets/images/hero10.jpg';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 import PText from './PText';
@@ -19,8 +19,8 @@ const HomeSection = () => (
         </div>
         <div className="hero__info">
           <PText>
-            I am working as a web developer for 2 years. I love to make new web
-            experiences for the people.
+            I am working as a web developer from last 2 years. I love to make
+            new web experiences for the people.
           </PText>
           <Button btnText="see my works" btnLink="/projects" />
         </div>

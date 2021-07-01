@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MapImg from '../assets/images/map.png';
+import MapImg from '../assets/images/map3.jpg';
 import PText from './PText';
 
 const Map = () => (
@@ -11,7 +11,7 @@ const Map = () => (
         <PText>Odisha, India</PText>
         <a
           className="map__card__link"
-          href="https://www.google.com/maps/place/GEC+More,+Chittagong/@22.3590818,91.8195583,17z/data=!3m1!4b1!4m5!3m4!1s0x30acd89aaa8239cd:0x6e65fa00001dd59f!8m2!3d22.3590715!4d91.8215486"
+          href="https://www.google.com/maps/place/Brahmapur,+Odisha/@19.2940657,84.7613927,13z/data=!4m13!1m7!3m6!1s0x3a3d500ef1cb60ad:0x5b75778874294ff!2sBrahmapur,+Odisha!3b1!8m2!3d19.3149618!4d84.7940911!3m4!1s0x3a3d500ef1cb60ad:0x5b75778874294ff!8m2!3d19.3149618!4d84.7940911"
           target="_blank"
           rel="noreferrer"
         >

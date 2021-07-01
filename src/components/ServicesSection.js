@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdDesktopMac, MdCode, MdPhonelinkSetup } from 'react-icons/md';
+import { MdDesktopMac, MdCode } from 'react-icons/md';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItem';
@@ -11,18 +11,18 @@ const ServicesSection = () => (
       <div className="services__allItems">
         <ServicesSectionItem
           icon={<MdDesktopMac />}
-          title="web design"
-          desc="I do ui/ux design for the website that helps website to get a unique look."
+          title="portfolio website"
+          desc="Portfolio website provides professional information about an individual or a company."
         />
         <ServicesSectionItem
           icon={<MdCode />}
-          title="web dev"
-          desc="I also develop the websites. I create high performance website with blazing fast speed."
+          title="ecommerce website"
+          desc="E-Commerce websites are online portals that facilitate online transactions of goods and services."
         />
         <ServicesSectionItem
-          icon={<MdPhonelinkSetup />}
-          title="app Dev"
-          desc="I develop mobile application. I create mobile app with eye catching ui. "
+          icon={<MdDesktopMac />}
+          title="blog website"
+          desc="To share information about a given topic and become an expert in an industry. "
         />
       </div>
     </div>

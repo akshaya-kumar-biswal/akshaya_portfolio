@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import PText from './PText';
 import Button from './Button';
-import AboutImg from '../assets/images/about-sec-img.png';
+import AboutImg from '../assets/images/about-page-img.jpg';
 
 const AboutSection = () => (
   <AboutSectionStyles>
@@ -11,9 +11,7 @@ const AboutSection = () => (
       <div className="aboutSection__left">
         <SectionTitle subheading="Let me introduce myself" heading="About Me" />
         <PText>
-          I am a freelance website designer and developer from Chittagong,
-          Bangladesh. I create professional websites. I love art and always try
-          to show unique views to the audience through my design.
+          I am a developer from Odisha, India. I create professional websites.
         </PText>
         <div className="aboutSection__buttons">
           <Button btnText="Works" btnLink="/projects" />
@@ -38,6 +36,14 @@ const AboutSectionStyles = styled.div`
   .aboutSection__left,
   .aboutSection__right {
     flex: 1;
+  }
+  .aboutSection__right {
+    display: inline-flex;
+  }
+  .aboutImg {
+    height: 300px;
+    width: 300px;
+    margin: auto;
   }
   .section-title {
     text-align: left;

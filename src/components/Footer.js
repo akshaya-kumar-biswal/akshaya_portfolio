@@ -9,8 +9,8 @@ const Footer = () => (
       <div className="footer__col1">
         <h1 className="footer__col1__title">Akshaya</h1>
         <PText>
-          A freelance web developer from India. I always make websites that have
-          unique designs and also has a good performance rate.
+          A web developer from India. I always make websites that have unique
+          designs and also has a good performance rate.
         </PText>
       </div>
       <div className="footer__col2">
