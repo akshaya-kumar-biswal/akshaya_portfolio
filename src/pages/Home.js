@@ -4,6 +4,7 @@ import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
 import ProjectsSection from '../components/ProjectsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import ContactBanner from '../components/ContactBanner';
 
 const Home = () => (
   <>
@@ -12,6 +13,7 @@ const Home = () => (
     <ServicesSection />
     <ProjectsSection />
     <TestimonialsSection />
+    <ContactBanner />
   </>
 );
 
