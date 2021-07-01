@@ -3,6 +3,90 @@ import styled from 'styled-components';
 import FooterCol from './FooterCol';
 import PText from './PText';
 
+const Footer = () => (
+  <FooterStyle>
+    <div className="container">
+      <div className="footer__col1">
+        <h1 className="footer__col1__title">Akshaya</h1>
+        <PText>
+          A freelance web developer from India. I always make websites that have
+          unique designs and also has a good performance rate.
+        </PText>
+      </div>
+      <div className="footer__col2">
+        <FooterCol
+          heading="Important Links"
+          links={[
+            {
+              title: 'Home',
+              path: '/',
+              type: 'Link',
+            },
+            {
+              type: 'Link',
+              title: 'About',
+              path: '/about',
+            },
+            {
+              type: 'Link',
+              title: 'Projects',
+              path: '/projects',
+            },
+            {
+              type: 'Link',
+              title: 'Contact',
+              path: '/contact',
+            },
+          ]}
+        />
+      </div>
+      <div className="footer__col3">
+        <FooterCol
+          heading="Contact Info"
+          links={[
+            {
+              title: '+91 8249189076',
+              path: 'tel:+91 8249189076',
+            },
+            {
+              title: 'mail.akshayabiswal@gmail.com',
+              path: 'mailto:mail.akshayabiswal@gmail.com',
+            },
+            {
+              title: 'Odisha, India',
+              path: 'http://google.com/maps',
+            },
+          ]}
+        />
+      </div>
+      <div className="footer__col4">
+        <FooterCol
+          heading="Social Links"
+          links={[
+            {
+              title: 'Facebook',
+              path: 'http://facebook.com',
+            },
+            {
+              title: 'Twitter',
+              path: 'http://twitter.com',
+            },
+            {
+              title: 'Instagram',
+              path: 'http://instagram.com',
+            },
+          ]}
+        />
+      </div>
+    </div>
+    <div className="copyright">
+      <div className="container">
+        <PText>© 2021 - Akshaya</PText>
+      </div>
+    </div>
+  </FooterStyle>
+);
+
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
   padding-top: 10rem;
@@ -52,88 +136,4 @@ const FooterStyle = styled.div`
   }
 `;
 
-export default function Footer() {
-  return (
-    <FooterStyle>
-      <div className="container">
-        <div className="footer__col1">
-          <h1 className="footer__col1__title">Akshaya</h1>
-          <PText>
-            A freelance web developer from India. I always make websites that
-            have unique designs and also has a good performance rate.
-          </PText>
-        </div>
-        <div className="footer__col2">
-          <FooterCol
-            heading="Important Links"
-            links={[
-              {
-                title: 'Home',
-                path: '/',
-                type: 'Link',
-              },
-              {
-                type: 'Link',
-                title: 'About',
-                path: '/about',
-              },
-              {
-                type: 'Link',
-                title: 'Projects',
-                path: '/projects',
-              },
-              {
-                type: 'Link',
-                title: 'Contact',
-                path: '/contact',
-              },
-            ]}
-          />
-        </div>
-        <div className="footer__col3">
-          <FooterCol
-            heading="Contact Info"
-            links={[
-              {
-                title: '+91 8249189076',
-                path: 'tel:+91 8249189076',
-              },
-              {
-                title: 'mail.akshayabiswal@gmail.com',
-                path: 'mailto:mail.akshayabiswal@gmail.com',
-              },
-              {
-                title: 'Odisha, India',
-                path: 'http://google.com/maps',
-              },
-            ]}
-          />
-        </div>
-        <div className="footer__col4">
-          <FooterCol
-            heading="Social Links"
-            links={[
-              {
-                title: 'Facebook',
-                path: 'http://facebook.com',
-              },
-              {
-                title: 'Twitter',
-                path: 'http://twitter.com',
-              },
-              {
-                title: 'Instagram',
-                path: 'http://instagram.com',
-              },
-            ]}
-          />
-        </div>
-      </div>
-      <div className="copyright">
-        <div className="container">
-          <PText>© 2021 - Akshaya</PText>
-        </div>
-      </div>
-    </FooterStyle>
-  );
-}
+export default Footer;

@@ -3,6 +3,18 @@ import { MdDesktopMac } from 'react-icons/md';
 import styled from 'styled-components';
 import PText from './PText';
 
+const ServicesSectionItem = ({
+  icon = <MdDesktopMac />,
+  title = 'Web Design',
+  desc = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ok",
+}) => (
+  <ItemStyles className="servicesItem">
+    <div className="servicesItem__icon">{icon}</div>
+    <div className="servicesItem__title">{title}</div>
+    <PText>{desc}</PText>
+  </ItemStyles>
+);
+
 const ItemStyles = styled.div`
   text-align: center;
   .servicesItem__icon {
@@ -19,16 +31,4 @@ const ItemStyles = styled.div`
   }
 `;
 
-export default function ServicesSectionItem({
-  icon = <MdDesktopMac />,
-  title = 'Web Design',
-  desc = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ok",
-}) {
-  return (
-    <ItemStyles className="servicesItem">
-      <div className="servicesItem__icon">{icon}</div>
-      <div className="servicesItem__title">{title}</div>
-      <PText>{desc}</PText>
-    </ItemStyles>
-  );
-}
+export default ServicesSectionItem;

@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+const Button = ({ btnText = 'test', btnLink = 'test', outline = false }) => (
+  <ButtonStyle outline={outline} className="button-wrapper">
+    <Link className="button" to={btnLink}>
+      {btnText}
+    </Link>
+  </ButtonStyle>
+);
+
 const ButtonStyle = styled.div`
   margin-top: 2rem;
   .button {
@@ -20,13 +28,5 @@ const ButtonStyle = styled.div`
     }
   }
 `;
-
-const Button = ({ btnText = 'test', btnLink = 'test', outline = false }) => (
-  <ButtonStyle outline={outline} className="button-wrapper">
-    <Link className="button" to={btnLink}>
-      {btnText}
-    </Link>
-  </ButtonStyle>
-);
 
 export default Button;

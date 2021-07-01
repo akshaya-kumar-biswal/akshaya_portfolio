@@ -2,12 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import PText from './PText';
 
+const AboutInfoItem = ({ title = 'Title', items = ['HTML', 'CSS'] }) => (
+  <AboutItemStyles>
+    <h1 className="title">{title}</h1>
+    <div className="items">
+      {items.map((item, index) => (
+        <div className="item" key={index}>
+          <PText>{item}</PText>
+        </div>
+      ))}
+    </div>
+  </AboutItemStyles>
+);
+
 const AboutItemStyles = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  /* gap: 5rem; */
   margin-top: 3rem;
   .title {
     font-size: 2.4rem;
@@ -37,20 +49,4 @@ const AboutItemStyles = styled.div`
   }
 `;
 
-export default function AboutInfoItem({
-  title = 'Title',
-  items = ['HTML', 'CSS'],
-}) {
-  return (
-    <AboutItemStyles>
-      <h1 className="title">{title}</h1>
-      <div className="items">
-        {items.map((item, index) => (
-          <div className="item" key={index}>
-            <PText>{item}</PText>
-          </div>
-        ))}
-      </div>
-    </AboutItemStyles>
-  );
-}
+export default AboutInfoItem;

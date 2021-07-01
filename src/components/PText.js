@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const PText = ({ children }) => (
+  <PStyle className="para">
+    <p>{children}</p>
+  </PStyle>
+);
+
 const PStyle = styled.div`
   max-width: 500px;
   margin: 0 auto;
@@ -10,11 +16,5 @@ const PStyle = styled.div`
     font-size: 1.4rem;
   }
 `;
-
-const PText = ({ children }) => (
-  <PStyle className="para">
-    <p>{children}</p>
-  </PStyle>
-);
 
 export default PText;

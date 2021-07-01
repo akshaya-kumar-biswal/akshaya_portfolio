@@ -10,6 +10,48 @@ import projects from '../assets/data/projects';
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
+const ProjectsSection = () => (
+  <ProjectSectionStyle>
+    <div className="container">
+      <SectionTitle subheading="some of my recent works" heading="Projects" />
+      <div className="projects__allItems">
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 1200px
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {projects.map((project, index) => {
+            if (index >= 5) return;
+            return (
+              <SwiperSlide key={project.id}>
+                <ProjectItem
+                  title={project.name}
+                  img={project.img}
+                  desc={project.desc}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+    </div>
+  </ProjectSectionStyle>
+);
+
 const ProjectSectionStyle = styled.div`
   padding: 10rem 0;
   .projects__allItems {
@@ -56,45 +98,4 @@ const ProjectSectionStyle = styled.div`
   }
 `;
 
-const ProjectsSection = () => (
-  <ProjectSectionStyle>
-    <div className="container">
-      <SectionTitle subheading="some of my recent works" heading="Projects" />
-      <div className="projects__allItems">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          breakpoints={{
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 2,
-            },
-            // when window width is >= 1200px
-            1200: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {projects.map((project, index) => {
-            if (index >= 5) return;
-            return (
-              <SwiperSlide key={project.id}>
-                <ProjectItem
-                  title={project.name}
-                  img={project.img}
-                  desc={project.desc}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-    </div>
-  </ProjectSectionStyle>
-);
 export default ProjectsSection;

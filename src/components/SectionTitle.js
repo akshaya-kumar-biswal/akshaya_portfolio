@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const SectionTitle = ({
+  subheading = 'Need Subheading',
+  heading = 'need heading',
+}) => (
+  <SectionTitleStyle className="section-title">
+    <p>{subheading}</p>
+    <h2>{heading}</h2>
+  </SectionTitleStyle>
+);
+
 const SectionTitleStyle = styled.div`
   text-align: center;
   p {
@@ -23,15 +33,5 @@ const SectionTitleStyle = styled.div`
     }
   }
 `;
-
-const SectionTitle = ({
-  subheading = 'Need Subheading',
-  heading = 'need heading',
-}) => (
-  <SectionTitleStyle className="section-title">
-    <p>{subheading}</p>
-    <h2>{heading}</h2>
-  </SectionTitleStyle>
-);
 
 export default SectionTitle;

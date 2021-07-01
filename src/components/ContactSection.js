@@ -5,6 +5,27 @@ import ContactForm from './ContactForm';
 import ContactInfoItem from './ContactInfoItem';
 import SectionTitle from './SectionTitle';
 
+const ContactSection = () => (
+  <ContactSectionStyle>
+    <div className="container">
+      <SectionTitle heading="contact" subheading="get in touch" />
+      <div className="contactSection__wrapper">
+        <div className="left">
+          <ContactInfoItem icon={<MdLocalPhone />} text="+91 8249189076" />
+          <ContactInfoItem
+            icon={<MdEmail />}
+            text="mail.akshayabiswal@gmail.com"
+          />
+          <ContactInfoItem text="Odisha, India" />
+        </div>
+        <div className="right">
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </ContactSectionStyle>
+);
+
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
   .contactSection__wrapper {
@@ -50,25 +71,4 @@ const ContactSectionStyle = styled.div`
   }
 `;
 
-export default function ContactSection() {
-  return (
-    <ContactSectionStyle>
-      <div className="container">
-        <SectionTitle heading="contact" subheading="get in touch" />
-        <div className="contactSection__wrapper">
-          <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="+91 8249189076" />
-            <ContactInfoItem
-              icon={<MdEmail />}
-              text="mail.akshayabiswal@gmail.com"
-            />
-            <ContactInfoItem text="Odisha, India" />
-          </div>
-          <div className="right">
-            <ContactForm />
-          </div>
-        </div>
-      </div>
-    </ContactSectionStyle>
-  );
-}
+export default ContactSection;
