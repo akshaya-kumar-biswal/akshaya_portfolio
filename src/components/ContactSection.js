@@ -32,7 +32,6 @@ const ContactSectionStyle = styled.div`
     max-width: 500px;
     width: 100%;
     border-radius: 12px;
-    /* padding-left: 3rem; */
   }
   @media only screen and (max-width: 768px) {
     .contactSection__wrapper {
@@ -58,9 +57,12 @@ export default function ContactSection() {
         <SectionTitle heading="contact" subheading="get in touch" />
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="+8801231" />
-            <ContactInfoItem icon={<MdEmail />} text="webcifar@gmail.com" />
-            <ContactInfoItem text="Chittagong, Bangladesh" />
+            <ContactInfoItem icon={<MdLocalPhone />} text="+91 8249189076" />
+            <ContactInfoItem
+              icon={<MdEmail />}
+              text="mail.akshayabiswal@gmail.com"
+            />
+            <ContactInfoItem text="Odisha, India" />
           </div>
           <div className="right">
             <ContactForm />
