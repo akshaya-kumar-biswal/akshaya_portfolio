@@ -6,17 +6,21 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
+// import ScrollToTop from './components/ScrollToTop';
+import SmoothScrollBar from './components/SmoothScrollBar';
 
 const App = () => (
   <Router>
     <NavMenu />
-    <Switch>
-      <Route path="/about" component={About} />
-      <Route path="/projects" component={Projects} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/" component={Home} />
-    </Switch>
-    <Footer />
+    <SmoothScrollBar>
+      <Switch>
+        <Route path="/about" component={About} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/" component={Home} />
+      </Switch>
+      <Footer />
+    </SmoothScrollBar>
   </Router>
 );
 
